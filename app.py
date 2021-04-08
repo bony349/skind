@@ -72,12 +72,12 @@ def post():
    Image_to_pred = load_img(imagefile)
    Image_to_pred = Load_Images(Image_to_pred)
    prediction = np.argmax(covid.predict(Image_to_pred))
-    if (prediction == 0):
-        return jsonify({'prediction':'Non Informative Data'})
-    elif (prediction == 1):
-        return jsonify({'prediction':'Negative'})
-    elif (prediction == 2):
-        return jsonify({'prediction':'Positive'})
+   if (prediction == 0):
+       return jsonify({'prediction':'Non Informative Data'})
+   elif (prediction == 1):
+       return jsonify({'prediction':'Negative'})
+   elif (prediction == 2):
+       return jsonify({'prediction':'Positive'})
 
 
 if __name__ == '__main__':

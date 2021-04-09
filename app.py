@@ -1,5 +1,5 @@
 from keras.models import load_keras
-from skimage import transform
+from scikit-image import transform
 import numpy as np
 from keras.preprocessing.image import load_img
 from flask import Flask, request, render_template , jsonify

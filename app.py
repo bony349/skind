@@ -6,7 +6,7 @@ from flask import Flask, request, render_template , jsonify
 
 app = Flask(__name__)
 
-covid =  load_keras('Covid.h5')
+covid =  load_keras('Covid19.h5')
 def Load_Images(img):
   pred_img = np.array(img).astype('float32')/255
   pred_img = transform.resize(pred_img,(200,200,3))
